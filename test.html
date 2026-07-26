@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP30Words</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Overrides for base style.css used by index.html-->
+    <style>
+        main{
+            margin:auto;
+            min-height: 850px;
+        }
+        input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+        }
+        section{
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <a href="index.html"><img id="header-img" src="img/jp30.png" alt="JP30words logo"></a>
+            <div id = "header-text">
+                <h1>JP30Words</h1>
+                <p>Japanese language learning.</p>
+            </div>
+        </header>
+
+        <section id="test-page">
+            <h2>Flashcard Word Test</h2>
+            <p><a href="index.html">Return to main page.</a></p>
+            <p>If the test window is small I suggest increasing zoom with ctrl and + to a level you find comfortable. (Ctrl and - to reduce scale)</p>
+
+            <canvas width="400" height="400" id="game-bounds"></canvas>
+
+            <div id="type-selection">
+                <p>Pick your type: 
+                    <button id="nouns-btn">Nouns</button>
+                    <button id="verbs-btn">Verbs</button>
+                    <button id="adj-btn">Adjectives</button>
+                    <button id="jp30words-btn">Give me everything!</button>
+                </p>
+                <div>
+                    <input type="checkbox" id="show-hint" name="show-hint" value="Hint" checked>
+                    <label for="show-hint"> Show word in English on card?</label><br>
+                    <input type="checkbox" id="show-hira" name="show-hira" value="Hira" checked>
+                    <label for="show-hira"> Show hiragana on card?</label><br>
+                </div>
+            </div>
+
+            <div id="test-options" hidden>
+                <input type="text" id="romaji-input" name="romaji-input">
+                <button id="submit-btn">Submit</button>
+                <p><button id="skip-btn">Skip</button> You don't get to retry skipped words.</p>
+            </div>
+
+            <div id="success-confirm" hidden>
+                <button id="continue-btn">Next</button>
+            </div>
+        </section>
+
+        <footer>
+            JP30words &copy; 2026
+        </footer>
+    </main>
+    <script src="js/class.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
