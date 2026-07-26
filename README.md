@@ -1,0 +1,1 @@
+# jp30words-umn-project
